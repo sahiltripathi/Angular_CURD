@@ -1,0 +1,30 @@
+<form (ngSubmit)="logIn(form)" #form="ngForm">
+  <br>
+  <div class="col-sm-4">
+    <h4>{{title}}</h4><br>
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email" name="email" ngModel required>
+  </div>
+  </div>
+  <div class="col-sm-4">
+  <div class="form-group">
+  <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" name="password" ngModel required>
+
+  </div>
+
+  <button
+    class="btn btn-success"
+    type="submit" >Log In
+  </button>
+  </div>
+</form>
+
+<div class="col-sm-4">
+<div class="alert alert-danger" *ngIf="error">
+  <p>
+    {{ error }}
+  </p>
+</div>
+</div>
